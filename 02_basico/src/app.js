@@ -5,6 +5,8 @@
 require('./js-foundation/03-callbacks');
 require('./js-foundation/04-factory');
 const { getUserById } = require('./js-foundation/03-callbacks');
+const getPokemon = require('./js-foundation/05-promises');
+
 
 const id = 2;
 
@@ -18,3 +20,11 @@ getUserById(id, (err, user) => {
 
 // console.log(templateExports);
 // console.log(emailTemplate);
+
+getPokemon(2)
+  .then((pokemon) => {
+    console.log(pokemon.name);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
