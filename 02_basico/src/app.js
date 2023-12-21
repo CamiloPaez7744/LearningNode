@@ -6,7 +6,13 @@ require('./js-foundation/03-callbacks');
 require('./js-foundation/04-factory');
 const { getUserById } = require('./js-foundation/03-callbacks');
 const getPokemon = require('./js-foundation/05-promises');
+const { buildLogger } = require('./plugins');
 
+
+const logger = buildLogger('app');
+
+logger.info('Starting app');
+logger.error('ups! an error');
 
 const id = 2;
 
