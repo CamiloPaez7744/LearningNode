@@ -28,7 +28,7 @@ export class SaveFile implements SaveFileUseCase {
         });
         fs.writeFile(`${ destinationPath }${ fileName }.txt`, fileContent, (err: any) => {
             if (err) throw err;
-            console.log(`${ fileName } has been saved!`);
+            // console.log(`${ fileName } has been saved!`);
         });
         return true;
     }

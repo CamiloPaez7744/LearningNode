@@ -4,6 +4,10 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+### project files ###
+output/
+test-output/
+
 ### Log ###
 *.log
 
