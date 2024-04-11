@@ -16,7 +16,7 @@ export class LogEntity {
     
     public level: LogSeverityLevel;
     public message: string;
-    public createdAt: Date;
+    public createdAt?: Date;
     public origin: string;
 
     constructor(options: LogEntityOptions) {
