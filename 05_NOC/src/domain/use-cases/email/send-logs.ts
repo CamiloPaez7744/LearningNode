@@ -19,7 +19,7 @@ export class SendEmailLogs implements SendEmailLogUseCase {
 
         try {
             const sent = this.emailService.sendEmailWithFileSystemLogs(to);
-            if ( !sent) {
+            if (!sent) {
                 throw new Error('Error sending email');
             }
 

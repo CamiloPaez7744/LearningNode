@@ -8,6 +8,8 @@ target/
 output/
 test-output/
 logs/
+mongo/
+postgres/
 
 ### envs ###
 .env
