@@ -97,4 +97,24 @@ describe('file-system.datasource', () => {
 
         expect(true).toBeTruthy();
     });
+
+    it('should throw an error if severity level is not valid', async() => {
+
+        const logDatasource = new FileSystemDataSource();
+        const log = new LogEntity({
+            level: 'invalid' as LogSeverityLevel,
+            message: 'This is a test log low',
+            origin: 'file-system.datasource.test'
+        });
+
+        const customLog = 'SUPER_CUSTOM_LOG' as LogSeverityLevel;
+
+        try {
+            await logDatasource.getLogs(customLog);
+            expect(true).toBeFalsy();
+        } catch (error) {
+            const errorMessage = `${error}`;
+            expect(errorMessage).toContain('SUPER_CUSTOM_LOG not implemented');
+        }
+    });
 });
