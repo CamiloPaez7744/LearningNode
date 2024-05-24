@@ -245,3 +245,5 @@ dist
 # Optional stylelint cache
 # SvelteKit build / generate output
 .svelte-kit
+# Local Netlify folder
+.netlify
